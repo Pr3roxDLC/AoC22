@@ -1,3 +1,2 @@
 # AoC22
-Advent of Code with as little as possible java code.
-The least chars of actual code the better
+Advent of Code but its all java oneliners, and sometimes i try to optimize them for least chars of actual code.
