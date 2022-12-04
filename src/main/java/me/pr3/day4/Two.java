@@ -17,7 +17,7 @@ public class Two {
                         new ImmutablePair<>(Integer.parseInt(n.right.split("-")[0]), Integer.parseInt(n.right.split("-")[1]))))
                 .map(n -> new ImmutablePair<>(IntStream.range(n.left.left, n.left.right + 1), IntStream.range(n.right.left, n.right.right + 1)))
                 .map(n -> new ImmutablePair<>(n.left.boxed().collect(Collectors.toSet()), n.right.boxed().collect(Collectors.toSet())))
-                .filter(n -> SetUtils.union(n.left, n.right).size() < n.left.size() + n.right.size())
+                .filter(n -> !SetUtils.intersection(n.left,n.right).isEmpty())
                 .count()
         );
     }
